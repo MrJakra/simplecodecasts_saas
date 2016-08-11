@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
     def new
         # A form for the user, to fill out their own profile, nobody elses.
         @user = User.find(params[:user_id])
-        @profile = @user.build_profile
+        @profile = Profile.new
     end
     
     def create
