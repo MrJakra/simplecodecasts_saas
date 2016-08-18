@@ -1,5 +1,11 @@
-.avatar img {
+.user-index-avatar {
     border-radius: 50%;
+}
+
+.user-show-avatar {
+    border-radius: 50%;
+    height: 128px;
+    width: 128px;
 }
 
 .job-title-icon {
@@ -30,3 +36,6 @@
     border-color: #46b8da;
 }
 
+.well.white-bg {
+    background-color: #fff;
+}

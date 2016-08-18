@@ -1,1 +1,36 @@
-List all users
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <ul class="list-unstyled">
+            <% @users.each do |z| %>
+                <% if z.profile %>
+                <li>
+                    <div class= "well row <%= cycle('white-bg', '')%>">
+                        
+                        <!-- Avatar Listings -->
+                        <div class= "col-sm-4 text-center">
+                            <% if z.profile.avatar %>
+                                <!-- Links the user to the profile -->
+                                <%= link_to z do %>
+                                    <%= image_tag z.profile.avatar.url(:thumb), class: "user-index-avatar" %>
+                                <% end %>
+                                <!-- -->
+                            <% end %>
+                        </div>
+                        <!-- -->
+                        
+                        <!-- First, last names and job titles -->
+                        <div>
+                            <%= link_to z do %>
+                                <h2><%= z.profile.first_name %> <%= z.profile.last_name %></h2>
+                            <% end %>
+                                <p><%= z.profile.job_title %></p>
+                        </div>
+                        <!-- -->
+                        
+                    </div>
+                </li>
+                <% end %>
+            <% end %>
+        </ul>
+    </div>
+</div>
