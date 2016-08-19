@@ -23,7 +23,10 @@
                             <%= link_to z do %>
                                 <h2><%= z.profile.first_name %> <%= z.profile.last_name %></h2>
                             <% end %>
-                                <p><%= z.profile.job_title %></p>
+                                <p><%= z.profile.job_title %>
+                                <% if z.plan_id == 2 %>
+                                    <span class="label label-danger">PRO</span></p>
+                                <% end %>
                         </div>
                         <!-- -->
                         
